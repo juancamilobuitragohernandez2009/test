@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    .resolve{
+        font-size: 40px;
+        margin-top:30px;
+        margin-left:20px;
+    }
+</style>
+<script>
+    function resolveEquation(){
+        var seccionResolve = document.getElementById('seccionResolve')
+
+        for(x=-3;x<=3;x++){
+            y=-2*x+4;
+            
+            /*seccionResolve.innerHTML+=`<div class='resolve'>${y},${x}</div>`*/
+
+            var newElementX = document.createElement('input');
+            newElementX.type='number';
+            newElementX.value=x;
+            seccionResolve.appendChild(newElementX)
+
+            var newElementY = document.createElement('input');
+            newElementY.type='number';
+            newElementY.value=y;
+            seccionResolve.appendChild(newElementY)
+
+            var roveElement = document.createElement('br')
+            seccionResolve.appendChild(roveElement)
+        }
+    }
+</script>
+<body>
+    <div class="hader">
+        <div class="p">
+            Let's resolve:
+        </div>
+        <div>
+            <h2>y=-2x+4</h2>            
+        </div>
+        <div>
+            <button onclick="resolveEquation()"> 
+                Click to Resolve
+            </button>
+        </div>
+        <div id="seccionResolve">
+
+        </div>
+    </div>
+</body>
+</html>
+ 
